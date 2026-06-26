@@ -2712,7 +2712,7 @@ run(function()
             return nil
         end
 
-        local function AutoClickKingV4()
+        local function AutoClickKing()
             if Thread then task.cancel(Thread) end
             Thread = task_spawn(function()
                 repeat
@@ -2758,7 +2758,7 @@ run(function()
                             ActivationScheduled = task.delay(MIN_HOLD_TIME, function()
                                 ActivationScheduled = nil
                                 if inputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) then
-                                    AutoClickKingV4()
+                                    AutoClickKing()
                                 end
                             end)
                         end
@@ -2828,6 +2828,7 @@ run(function()
         end)
     end
 end)  
+
 
 run(function()
     local KitRender
