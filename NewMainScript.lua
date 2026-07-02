@@ -12,7 +12,7 @@ end
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/Kingifyfrmdao/Kingifyfrmdao/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/bestplayer7777777-creator/NewPro/'..readfile('newvape/profiles/commit.txt')..'/'..select(1, path:gsub('newvape/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -53,7 +53,7 @@ local function downloadPremadeProfiles(commit)
 		makefolder('newvape/profiles/premade')
 	end
 	local success, response = pcall(function()
-		return game:HttpGet('https://api.github.com/repos/Kingifyfrmdao/Kingifyfrmdao/contents/profiles/premade?ref=' .. commit)
+		return game:HttpGet('https://api.github.com/repos/bestplayer7777777-creator/NewPro/contents/profiles/premade?ref=' .. commit)
 	end)
 	if success and response then
 		local ok, files = pcall(function()
@@ -79,38 +79,4 @@ end
 
 if not shared.VapeDeveloper then
 	local _, subbed = pcall(function()
-		return game:HttpGet('https://github.com/Kingifyfrmdao/Kingifyfrmdao')
-	end)
-	local commit = 'main'
-	local ok, res = pcall(function()
-		return game:HttpGet('https://api.github.com/repos/Kingifyfrmdao/Kingifyfrmdao/commits/main', true)
-	end)
-	if ok and res then
-		local h = res:match('"sha":"([a-f0-9]+)"')
-		if h and #h == 40 then
-			commit = h
-		end
-	end
-	if commit ~= 'main' and (isfile('newvape/profiles/commit.txt') and readfile('newvape/profiles/commit.txt') or '') ~= commit then
-		wipeFolder('newvape')
-		wipeFolder('newvape/games')
-		wipeFolder('newvape/guis')
-		pcall(function()
-			if isfile('newvape/guis/new.lua') then delfile('newvape/guis/new.lua') end
-		end)
-		wipeFolder('newvape/libraries')
-		if isfolder('newvape/profiles/premade') then
-			for _, file in listfiles('newvape/profiles/premade') do
-				pcall(function()
-					if isfile(file) then delfile(file) end
-				end)
-			end
-		end
-	end
-	writefile('newvape/profiles/commit.txt', commit)
-	pcall(downloadPremadeProfiles, commit)
-end
-
-return loadstring(downloadFile('newvape/main.lua'), 'main')({
-    Username = shared.ValidatedUsername
-})
+		return game:HttpGet('
