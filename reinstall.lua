@@ -28,6 +28,6 @@ for _, item in ipairs(listfiles("newvape")) do
     end
 end
 
-print("loading Kingv4...")
+print("loading NovaV4...")
 task.wait(1)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Kingifyfrmdao/Kingifyfrmdao/main/downloader.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bestplayer7777777-creator/NewPro/main/downloader.lua", true))()
