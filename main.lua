@@ -20,7 +20,7 @@ local vape
 local loadstring = function(...)
 	local res, err = _realLoadstring(...)
 	if err and vape then
-		vape:CreateNotification('King', 'Failed to load : '..err, 30, 'alert')
+		vape:CreateNotification('Nova', 'Failed to load : '..err, 30, 'alert')
 	end
 	return res
 end
@@ -97,7 +97,7 @@ pcall(migrateProfiles)
 local function finishLoading()
 	vape.Init = nil
 	if not vape.Load then
-		warn('[King] vape.Load is nil skipping load')
+		warn('[Nova] vape.Load is nil skipping load')
 		return
 	end
 	vape:Load()
@@ -124,7 +124,7 @@ local function finishLoading()
 				teleportScript = 'shared.ValidatedUsername = "' .. shared.ValidatedUsername .. '"\n' .. teleportScript
 			end
 			local _ok, _err = pcall(function() vape:Save() end)
-			if not _ok then warn('[King] save failed before teleport: ' .. tostring(_err)) toclipboard(_err) end
+			if not _ok then warn('[Nova] save failed before teleport: ' .. tostring(_err)) toclipboard(_err) end
 			queue_on_teleport(teleportScript)
 		end
 	end))
@@ -205,15 +205,15 @@ if not guiFunc then
 		end
 		context = '\n\nContext:\n' .. table.concat(parts, '\n')
 	end
-	error('[King] syntax error in ' .. gui .. '.lua' .. '\n' .. errMsg .. context)
+	error('[Nova] syntax error in ' .. gui .. '.lua' .. '\n' .. errMsg .. context)
 end
 vape = guiFunc()
 if not vape then
-	error('[King] GUI returned nil file may be corrupted try deleting newvape/guis/' .. gui .. '.lua and reinjecting.')
+	error('[Nova] GUI returned nil file may be corrupted try deleting newvape/guis/' .. gui .. '.lua and reinjecting.')
 end
 if not vape.Load then
 	if delfile then pcall(function() delfile('newvape/guis/' .. gui .. '.lua') end) end
-	error('[King] gui file corrupted (missing load) reinject..')
+	error('[Nova] gui file corrupted (missing load) reinject..')
 end
 shared.vape = vape
 task.wait(0.1)
