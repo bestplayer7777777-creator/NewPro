@@ -79,4 +79,38 @@ end
 
 if not shared.VapeDeveloper then
 	local _, subbed = pcall(function()
-		return game:HttpGet('
+		return game:HttpGet('https://github.com/bestplayer7777777-creator/NewPro')
+	end)
+	local commit = 'main'
+	local ok, res = pcall(function()
+		return game:HttpGet('https://api.github.com/repos/bestplayer7777777-creator/NewPro/commits/main', true)
+	end)
+	if ok and res then
+		local h = res:match('"sha":"([a-f0-9]+)"')
+		if h and #h == 40 then
+			commit = h
+		end
+	end
+	if commit ~= 'main' and (isfile('newvape/profiles/commit.txt') and readfile('newvape/profiles/commit.txt') or '') ~= commit then
+		wipeFolder('newvape')
+		wipeFolder('newvape/games')
+		wipeFolder('newvape/guis')
+		pcall(function()
+			if isfile('newvape/guis/new.lua') then delfile('newvape/guis/new.lua') end
+		end)
+		wipeFolder('newvape/libraries')
+		if isfolder('newvape/profiles/premade') then
+			for _, file in listfiles('newvape/profiles/premade') do
+				pcall(function()
+					if isfile(file) then delfile(file) end
+				end)
+			end
+		end
+	end
+	writefile('newvape/profiles/commit.txt', commit)
+	pcall(downloadPremadeProfiles, commit)
+end
+
+return loadstring(downloadFile('newvape/main.lua'), 'main')({
+    Username = shared.ValidatedUsername
+})
