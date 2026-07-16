@@ -15207,7 +15207,7 @@ run(function()
         end)
     end
     
-    BedPlates = vape.Categories.Minigames:CreateModule({
+    BedPlates = vape.Categories.Bypass:CreateModule({
         Name = 'BedPlates',
         Function = function(callback)
             if callback then
@@ -15872,7 +15872,7 @@ run(function()
 		return false
 	end
 
-	Breaker = vape.Categories.Minigames:CreateModule({
+	Breaker = vape.Categories.Bypass:CreateModule({
 		Name = 'Breaker',
 		Function = function(callback)
 			if callback then
@@ -28680,7 +28680,7 @@ run(function()
 		end
 	end
 	
-	AutoHonor = vape.Categories.Minigames:CreateModule({
+	AutoHonor = vape.Categories.Bypass:CreateModule({
 		Name = "AutoHonor",
 		Function = function(callback)
 			if callback then
