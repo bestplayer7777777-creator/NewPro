@@ -1,4 +1,4 @@
-local Nova=Path2DControlPoint.new(UDim2.new(0,0,0,0))
+local APE=Path2DControlPoint.new(UDim2.new(0,0,0,0))
 repeat task.wait() until game:IsLoaded()
 if shared.vape then shared.vape:Uninject() end
 
@@ -20,7 +20,7 @@ local vape
 local loadstring = function(...)
 	local res, err = _realLoadstring(...)
 	if err and vape then
-		vape:CreateNotification('Nova', 'Failed to load : '..err, 30, 'alert')
+		vape:CreateNotification('APE', 'Failed to load : '..err, 30, 'alert')
 	end
 	return res
 end
