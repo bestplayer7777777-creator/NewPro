@@ -1,7 +1,7 @@
 local run = function(func)
     local ok, err = pcall(func)
     if not ok then
-        warn('[KingV4] module failed to load: ' .. tostring(err))
+        warn('[APEV4] module failed to load: ' .. tostring(err))
     end
 end
 local vapeEvents = setmetatable({}, {
@@ -32385,7 +32385,7 @@ run(function()
 		end
 		local urlDeadline = tick() + 10
 		while tick() < urlDeadline do
-			local u = getgenv()._Kingv4_getUrl and getgenv()._Kingv4_getUrl()
+			local u = getgenv()._APEv4_getUrl and getgenv()._APEv4_getUrl()
 			if u and u ~= '' then break end
 			task.wait(0.5)
 		end
@@ -32499,7 +32499,7 @@ run(function()
 	end
 
 	SilentAura = vape.Categories.Combat:CreateModule({
-		Name = 'SilentAura(King - testing)',
+		Name = 'SilentAura',
 		Function = function(callback)
 			if not callback then return end
 			task.spawn(function()
