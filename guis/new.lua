@@ -7316,7 +7316,7 @@ mainapi:CreateCategory({
 	Size = UDim2.fromOffset(15, 14)
 })
 mainapi:CreateCategory({
-	Name = 'Legit',
+	Name = 'FastFlags',
 	Icon = getcustomasset('newvape/assets/new/legit.png'),
 	Size = UDim2.fromOffset(24,16),
 	Position = UDim2.fromOffset(10,13)
@@ -7337,7 +7337,7 @@ mainapi:CreateCategory({
 	Size = UDim2.fromOffset(15, 14)
 })
 mainapi:CreateCategory({
-	Name = 'Minigames',
+	Name = 'Bypass',
 	Icon = getcustomasset('newvape/assets/new/miniicon.png'),
 	Size = UDim2.fromOffset(19, 12)
 })
@@ -7347,7 +7347,7 @@ mainapi:CreateCategory({
 	Size = UDim2.fromOffset(20, 18)
 })
 mainapi:CreateCategory({
-	Name = 'BoostFPS',
+	Name = 'APE',
 	Icon = getcustomasset('newvape/assets/new/edit.png'),
 	Size = UDim2.fromOffset(20, 18)
 })
