@@ -216,6 +216,7 @@ if not vape.Load then
 	error('[APE] gui file corrupted (missing load) reinject..')
 end
 shared.vape = vape
+getgenv().vape = vape
 task.wait(0.1)
 
 if getgenv().Closet then
