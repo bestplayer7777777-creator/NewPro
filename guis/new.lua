@@ -7349,7 +7349,7 @@ mainapi:CreateCategory({
 mainapi:CreateCategory({
 	Name = 'APE',
 	Icon = getcustomasset('newvape/assets/new/edit.png'),
-	Size = UDim2.fromOffset(20, 18)
+	Size = UDim2.fromOffset(14, 14)
 })
 mainapi.Categories.Main:CreateDivider('misc')
 
