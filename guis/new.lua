@@ -7339,7 +7339,7 @@ mainapi:CreateCategory({
 mainapi:CreateCategory({
 	Name = 'Bypass',
 	Icon = getcustomasset('newvape/assets/new/miniicon.png'),
-	Size = UDim2.fromOffset(14, 14)
+	Size = UDim2.fromOffset(15, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Kits',
@@ -8473,7 +8473,7 @@ guipane:CreateButton({
 			UtilityCategory = 5,
 			WorldCategory = 6,
 			InventoryCategory = 7,
-			MinigamesCategory = 8,
+			BypassCategory = 8,
 			FriendsCategory = 9,
 			ProfilesCategory = 10
 		}
