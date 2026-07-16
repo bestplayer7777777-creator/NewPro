@@ -7339,7 +7339,7 @@ mainapi:CreateCategory({
 mainapi:CreateCategory({
 	Name = 'Bypass',
 	Icon = getcustomasset('newvape/assets/new/miniicon.png'),
-	Size = UDim2.fromOffset(19, 12)
+	Size = UDim2.fromOffset(14, 14)
 })
 mainapi:CreateCategory({
 	Name = 'Kits',
