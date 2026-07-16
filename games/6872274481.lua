@@ -16224,7 +16224,7 @@ run(function()
 	local originalAddGameNametag
 	local nametagHooked = false
 	
-	FPSBoost = vape.Categories.BoostFPS:CreateModule({
+	FPSBoost = vape.Categories.APE:CreateModule({
 		Name = 'FPSBoost',
 		Function = function(callback)
 			if callback then
@@ -20086,7 +20086,7 @@ run(function()
 		end
 	end
 	
-	ShadowRemover = vape.Categories.BoostFPS:CreateModule({
+	ShadowRemover = vape.Categories.APE:CreateModule({
 		Name = 'ShadowRemover',
 		Function = function(callback)
 			if callback then
@@ -21166,7 +21166,7 @@ run(function()
 		return count
 	end
 	
-	RemoveNeon = vape.Categories.BoostFPS:CreateModule({
+	RemoveNeon = vape.Categories.APE:CreateModule({
 		Name = 'RemoveNeon',
 		Function = function(callback)
 			if callback then
@@ -29511,7 +29511,7 @@ run(function()
 		table.insert(blockMonitorConnections, cleanupConn)
 	end
 	
-	PotatoMode = vape.Categories.BoostFPS:CreateModule({
+	PotatoMode = vape.Categories.APE:CreateModule({
 		Name = 'PotatoMode',
 		Function = function(callback)
 			if callback then
