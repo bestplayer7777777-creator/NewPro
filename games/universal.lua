@@ -7774,7 +7774,7 @@ run(function()
 	local Value
 	local oldfov
 	
-	FOV = vape.Categories.Legit:CreateModule({
+	FOV = vape.Categories.FastFlags:CreateModule({
 		Name = 'FOV',
 		Function = function(callback)
 			if callback then
@@ -7800,7 +7800,7 @@ run(function()
 	local FPS
 	local label
 	
-	FPS = vape.Categories.Legit:CreateModule({
+	FPS = vape.Categories.FastFlags:CreateModule({
 		Name = 'FPS',
 		Function = function(callback)
 			if callback then
@@ -7888,7 +7888,7 @@ run(function()
 		keys[keybutton] = {Key = key}
 	end
 	
-	Keystrokes = vape.Categories.Legit:CreateModule({
+	Keystrokes = vape.Categories.FastFlags:CreateModule({
 		Name = 'Keystrokes',
 		Function = function(callback)
 			if callback then
@@ -7993,7 +7993,7 @@ run(function()
 	local Memory
 	local label
 	
-	Memory = vape.Categories.Legit:CreateModule({
+	Memory = vape.Categories.FastFlags:CreateModule({
 		Name = 'Memory',
 		Function = function(callback)
 			if callback then
@@ -8040,7 +8040,7 @@ run(function()
 	local Ping
 	local label
 	
-	Ping = vape.Categories.Legit:CreateModule({
+	Ping = vape.Categories.FastFlags:CreateModule({
 		Name = 'Ping',
 		Function = function(callback)
 			if callback then
@@ -8130,7 +8130,7 @@ run(function()
 		end
 	end
 	
-	SongBeats = vape.Categories.Legit:CreateModule({
+	SongBeats = vape.Categories.FastFlags:CreateModule({
 		Name = 'Song Beats',
 		Function = function(callback)
 			if callback then
@@ -8210,7 +8210,7 @@ run(function()
 	local Speedmeter
 	local label
 	
-	Speedmeter = vape.Categories.Legit:CreateModule({
+	Speedmeter = vape.Categories.FastFlags:CreateModule({
 		Name = 'Speedmeter',
 		Function = function(callback)
 			if callback then
@@ -8260,7 +8260,7 @@ run(function()
 	local Value
 	local old
 	
-	TimeChanger = vape.Categories.Legit:CreateModule({
+	TimeChanger = vape.Categories.FastFlags:CreateModule({
 		Name = 'Time Changer',
 		Function = function(callback)
 			if callback then
@@ -8344,7 +8344,7 @@ run(function()
         vape:CreateNotification('Vape', 'FFlags applied, Go in a new game to take effect', 12, 'info')
     end
 
-    FFlag = vape.Categories.Legit:CreateModule({
+    FFlag = vape.Categories.FastFlags:CreateModule({
         Name = 'FFlag Editor',
         Function = function(call)
             if call then
@@ -8522,7 +8522,7 @@ run(function()
 		restoreLightingChildren()
 	end
 
-	Shaders = vape.Categories.Legit:CreateModule({
+	Shaders = vape.Categories.FastFlags:CreateModule({
 		Name = "Shaders",
 		Function = function(callback)
 			if callback then enable() else disable() end
