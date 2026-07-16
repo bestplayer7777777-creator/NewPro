@@ -162,7 +162,7 @@ end)
 run(function()
 	local AutoGamble
 	
-	AutoGamble = vape.Categories.Minigames:CreateModule({
+	AutoGamble = vape.Categories.Bypass:CreateModule({
 		Name = 'AutoGamble',
 		Function = function(callback)
 			if callback then
@@ -896,7 +896,7 @@ run(function()
 		savedFullLeaderboards = nil
 	end
 
-	LeaderboardSpoof = vape.Categories.Minigames:CreateModule({
+	LeaderboardSpoof = vape.Categories.Bypass:CreateModule({
 		Name = "LeaderboardSpoof",
 		Function = function(enabled)
 			if enabled then doDispatch() else doRevert() end
@@ -1380,7 +1380,7 @@ run(function()
 		if ppLoop then task.cancel(ppLoop) ppLoop = nil end
 	end
 
-	PlayerProfileSpoof = vape.Categories.Minigames:CreateModule({
+	PlayerProfileSpoof = vape.Categories.Bypass:CreateModule({
 		Name = "PlayerProfileSpoof",
 		Function = function(callback)
 			if callback then ppStartLoop() else ppCleanup() end
@@ -1479,7 +1479,7 @@ run(function()
         originalWins = nil
     end
 
-    SetPlayerWins = vape.Categories.Minigames:CreateModule({
+    SetPlayerWins = vape.Categories.Bypass:CreateModule({
         Name = "SetPlayerWins",
         Function = function(state)
             if state then
@@ -1520,7 +1520,7 @@ run(function()
         DoesExist = nil,
     }
 
-    WinstreakSpoofer = vape.Categories.Minigames:CreateModule({
+    WinstreakSpoofer = vape.Categories.Bypass:CreateModule({
         Name = 'WinstreakSpoofer',
         Tooltip = 'Modifies/Adds your winstreak (client‑sided)',
         Function = function(callback)
@@ -1932,7 +1932,7 @@ run(function()
 	end
 
 	local sbsLoop = nil
-	StatsBoardSpoof = vape.Categories.Minigames:CreateModule({
+	StatsBoardSpoof = vape.Categories.Bypass:CreateModule({
 		Name = "StatsBoardSpoof",
 		Tooltip = "Spoof your StatsBoard display (client-sided only)",
 		Function = function(enabled)
@@ -2113,7 +2113,7 @@ run(function()
         end
     end
 
-    LARPKits = vape.Categories.Minigames:CreateModule({
+    LARPKits = vape.Categories.Bypass:CreateModule({
         Name = "LARPKits",
         Tooltip = "do u own it or not !!! (client sided pls dont be dumb)",
         Function = function(callback)
