@@ -7072,7 +7072,7 @@ run(function()
 		end
 	end
 	
-	MurderMystery = vape.Categories.Minigames:CreateModule({
+	MurderMystery = vape.Categories.Bypass:CreateModule({
 		Name = 'MurderMystery',
 		Function = function(callback)
 			if callback then
